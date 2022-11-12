@@ -5,10 +5,6 @@ const Poster = () => {
   return (
     <div className="">
       <Main />
-      <div className="buttons-wrapper">
-        <button className="Generate">GENERATE</button>
-        <button className="Generate">Download</button>
-      </div>
     </div>
   );
 };

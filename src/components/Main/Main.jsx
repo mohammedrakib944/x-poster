@@ -1,12 +1,22 @@
 import "./main.css";
 import { useState } from "react";
 
+import downloadjs from "downloadjs";
+import html2canvas from "html2canvas";
+
 const Main = () => {
   const [poster, setPoster] = useState(null);
   const [qrcode, setQrcode] = useState(null);
-  const [title, setTitle] = useState("NAME");
-  const [title2, setTitle2] = useState("Title");
-  const [pera, setPera] = useState("Content");
+  const [title, setTitle] = useState("Title");
+  const [owner, setOwner] = useState("Owner");
+  const [id, setId] = useState("23");
+  const [rank, setRank] = useState("423");
+  const [description, setDescription] = useState(
+    "Description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  );
+  const [token, setToken] = useState("xxxx-xxxxx-xx");
+  const [blockchain, setBlockchain] = useState("MultiversX");
+  const [creator, setCreator] = useState("xxxx...xxxx");
 
   function uploadPoster(e) {
     setPoster(URL.createObjectURL(e.target.files[0]));
@@ -15,63 +25,170 @@ const Main = () => {
   function uploadQrCode(e) {
     setQrcode(URL.createObjectURL(e.target.files[0]));
   }
+
+  const handleCaptureClick = async () => {
+    const canvas = await html2canvas(document.getElementById("ourPoster"));
+    const dataURL = canvas.toDataURL("image/png");
+    downloadjs(dataURL, "poster.png", "image/png");
+  };
+
   return (
-    <div className="main-wrapper">
-      <div>
-        <div>
-          <label className="uploadImage" htmlFor="posterimage">
-            Upload Poster
-          </label>
-          <input id="posterimage" type="file" onChange={uploadPoster} hidden />
-        </div>
-        <br />
-        <input
-          className="inputText"
-          type="text"
-          placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <br />
-        <br />
-        <input
-          className="inputText"
-          placeholder="Second Title"
-          type="text"
-          value={title2}
-          onChange={(e) => setTitle2(e.target.value)}
-        />
-        <br />
-        <br />
-        <textarea
-          className="inputText"
-          rows="6"
-          placeholder="Content"
-          value={pera}
-          onChange={(e) => setPera(e.target.value)}
-        ></textarea>
-        <br />
-        <br />
-        <div>
-          <label className="uploadImage" htmlFor="qrcode">
-            Upload QR Code
-          </label>
-          <input id="qrcode" type="file" onChange={uploadQrCode} hidden />
-        </div>
-      </div>
-      <div className="main">
-        <img className="posterImage" src={poster} />
-        <h2 className="title">{title}</h2>
-        <br />
-        <h3 className="title2">{title2}</h3>
-        <div className="doc">
+    <>
+      <div className="main-wrapper">
+        <div className="fields-wrapper">
           <div>
-            <p>{pera}</p>
+            <label className="uploadImage" htmlFor="posterimage">
+              Upload Poster
+            </label>
+            <input
+              id="posterimage"
+              type="file"
+              onChange={uploadPoster}
+              hidden
+            />
           </div>
-          <img className="qrCode" src={qrcode} />
+          <div className="input-cls">
+            <p>Title</p>
+            <input
+              className="inputText"
+              type="text"
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+
+          <div className="input-cls">
+            <p>Owner</p>
+            <input
+              className="inputText"
+              placeholder="Owner"
+              type="text"
+              value={owner}
+              onChange={(e) => setOwner(e.target.value)}
+            />
+          </div>
+
+          <div className="input-cls">
+            <p>ID</p>
+            <input
+              className="inputText"
+              placeholder="ID"
+              type="text"
+              value={id}
+              onChange={(e) => setId(e.target.value)}
+            />
+          </div>
+
+          <div className="input-cls">
+            <p>Rank</p>
+            <input
+              className="inputText"
+              placeholder="Rank"
+              type="text"
+              value={rank}
+              onChange={(e) => setRank(e.target.value)}
+            />
+          </div>
+
+          <div className="input-cls">
+            <p>Description</p>
+            <textarea
+              className="inputText"
+              placeholder="Description"
+              type="text"
+              value={description}
+              rows="3"
+              onChange={(e) => setDescription(e.target.value)}
+            ></textarea>
+          </div>
+
+          <div className="input-cls">
+            <p>Token</p>
+            <input
+              className="inputText"
+              placeholder="Token"
+              type="text"
+              value={token}
+              onChange={(e) => setToken(e.target.value)}
+            />
+          </div>
+
+          <div className="input-cls">
+            <p>BLOCKCHAIN</p>
+            <input
+              className="inputText"
+              placeholder="Blockchain"
+              type="text"
+              value={blockchain}
+              onChange={(e) => setBlockchain(e.target.value)}
+            />
+          </div>
+
+          <div className="input-cls">
+            <p>Creator</p>
+            <input
+              className="inputText"
+              placeholder="Creator"
+              type="text"
+              value={creator}
+              onChange={(e) => setCreator(e.target.value)}
+            />
+          </div>
+          <div>
+            <label className="uploadImage" htmlFor="qrcode">
+              Upload QR Code
+            </label>
+            <input id="qrcode" type="file" onChange={uploadQrCode} hidden />
+          </div>
+          <br />
+          <button className="Generate" onClick={() => handleCaptureClick()}>
+            DOWNLOAD
+          </button>
+        </div>
+
+        <div className="Poster-Wrapper">
+          <h2>PREVIEW</h2>
+          <br />
+          {/* DOWNLOADED CANVAS */}
+          <div className="main" id="ourPoster">
+            <img className="posterImage" src={poster} />
+            <h2 className="title">{title}</h2>
+
+            <h3 className="title2">{owner}</h3>
+            <div className="id-rank">
+              <p>
+                <span>ID</span> # {id} &nbsp; | &nbsp; <span>RANK</span> #{" "}
+                {rank}
+              </p>
+            </div>
+            <div className="doc">
+              <div className="">
+                <p className="content">{description}</p>
+                <div className="footer">
+                  <div className="footer-doc">
+                    <h3>TOEKN</h3>
+                    <p>{token}</p>
+                  </div>
+                  <div className="footer-doc">
+                    <h3>BLOCKCHAIN</h3>
+                    <p>{blockchain}</p>
+                  </div>
+                  <div className="footer-doc">
+                    <h3>CREATOR</h3>
+                    <p>{creator}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="qrParent">
+                <div className="backgroundBlur"></div>
+                <img className="qrCode" src={qrcode} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

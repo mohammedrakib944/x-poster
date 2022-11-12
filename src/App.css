@@ -2,7 +2,7 @@
 
 :root {
   --primary: #3af342;
-  --secondary: #47dbac;
+  --secondary: #0ebfaf;
 }
 /* 
 font-family: 'Goldman', cursive;
@@ -19,12 +19,12 @@ body {
   width: 100%;
   min-height: 100vh;
   background: url("./assets/bg.jpg") center no-repeat;
-  backdrop-filter: hue-rotate(235deg) brightness(0.4);
+  backdrop-filter: brightness(0.4);
   background-size: cover;
   color: white;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 20px;
 }
