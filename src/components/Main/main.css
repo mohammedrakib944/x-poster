@@ -1,0 +1,78 @@
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.uploadImage {
+  width: 350px;
+  display: block;
+  background: #171616;
+  color: var(--primary);
+  padding: 20px 30px;
+  border: 1px dotted var(--primary);
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+/* CARD START FROM HERE */
+.main {
+  max-width: 700px;
+  min-width: 500px;
+  min-height: 500px;
+  /* background: url("../../assets/cardBG.jpg") center no-repeat; */
+  background: repeating-linear-gradient(32deg, black, #009688 500px);
+  background-size: cover;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 50px;
+  position: relative;
+}
+.poster-wrapper {
+  width: 100%;
+  min-height: 200px;
+  border: 1px dotted black;
+  border-radius: 7px;
+}
+.posterImage {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 7px;
+}
+.title {
+  font-size: 42px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.doc {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+}
+.title2 {
+  font-size: 24px;
+}
+.inputText {
+  width: 350px;
+  background: #171616;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 22px;
+  border: 1px solid var(--primary);
+}
+.inputText:focus {
+  outline: none;
+}
+.qrCodeWrapper {
+  width: 200px;
+  min-height: 150px;
+  border: 1px dotted black;
+  border-radius: 7px;
+}
+.qrCode {
+  width: 200px;
+  min-height: 120px;
+  border-radius: 3px;
+}
