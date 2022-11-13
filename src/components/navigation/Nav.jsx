@@ -9,7 +9,7 @@ const Nav = () => {
         <h2 className="logo">X-POSTERS</h2>
       </Link>
       <div className="nav-text">
-        <a href="#">ABOUT US</a>
+        <Link to="/about">ABOUT US</Link>
         <Heart />
         <a href="#">
           <Twitter />

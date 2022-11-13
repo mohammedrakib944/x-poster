@@ -1,6 +1,6 @@
 import "./main.css";
 import { useState } from "react";
-
+import { QuestionCircleFill } from "react-bootstrap-icons";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
 
@@ -36,9 +36,9 @@ const Main = () => {
     <>
       <div className="main-wrapper">
         <div className="fields-wrapper">
-          <div>
+          <div className="flex">
             <label className="uploadImage" htmlFor="posterimage">
-              Upload Poster
+              Upload NFT
             </label>
             <input
               id="posterimage"
@@ -46,11 +46,17 @@ const Main = () => {
               onChange={uploadPoster}
               hidden
             />
+            <div>
+              <a href="#" className="question">
+                <QuestionCircleFill />
+              </a>
+            </div>
           </div>
           <div className="input-cls">
-            <p>Title</p>
+            <p>Title ({title.length} / 32)</p>
             <input
               className="inputText"
+              maxLength={32}
               type="text"
               placeholder="Title"
               value={title}
@@ -59,10 +65,11 @@ const Main = () => {
           </div>
 
           <div className="input-cls">
-            <p>Owner</p>
+            <p>Owner ({owner.length} / 32)</p>
             <input
               className="inputText"
               placeholder="Owner"
+              maxLength={32}
               type="text"
               value={owner}
               onChange={(e) => setOwner(e.target.value)}
@@ -70,10 +77,11 @@ const Main = () => {
           </div>
 
           <div className="input-cls">
-            <p>ID</p>
+            <p>ID ({id.length} / 16)</p>
             <input
               className="inputText"
               placeholder="ID"
+              maxLength={16}
               type="text"
               value={id}
               onChange={(e) => setId(e.target.value)}
@@ -81,10 +89,11 @@ const Main = () => {
           </div>
 
           <div className="input-cls">
-            <p>Rank</p>
+            <p>Rank ({rank.length} / 16)</p>
             <input
               className="inputText"
               placeholder="Rank"
+              maxLength={16}
               type="text"
               value={rank}
               onChange={(e) => setRank(e.target.value)}
@@ -92,22 +101,26 @@ const Main = () => {
           </div>
 
           <div className="input-cls">
-            <p>Description</p>
+            <p>
+              Description (<span>{description.length} / 250 )</span>
+            </p>
             <textarea
               className="inputText"
               placeholder="Description"
               type="text"
               value={description}
               rows="3"
+              maxLength={250}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
           </div>
 
           <div className="input-cls">
-            <p>Token</p>
+            <p>Token ({token.length} / 16)</p>
             <input
               className="inputText"
               placeholder="Token"
+              maxLength={16}
               type="text"
               value={token}
               onChange={(e) => setToken(e.target.value)}
@@ -115,10 +128,11 @@ const Main = () => {
           </div>
 
           <div className="input-cls">
-            <p>BLOCKCHAIN</p>
+            <p>BLOCKCHAIN ({blockchain.length} / 16)</p>
             <input
               className="inputText"
               placeholder="Blockchain"
+              maxLength={16}
               type="text"
               value={blockchain}
               onChange={(e) => setBlockchain(e.target.value)}
@@ -126,20 +140,26 @@ const Main = () => {
           </div>
 
           <div className="input-cls">
-            <p>Creator</p>
+            <p>Creator ({creator.length} / 16)</p>
             <input
               className="inputText"
               placeholder="Creator"
+              maxLength={16}
               type="text"
               value={creator}
               onChange={(e) => setCreator(e.target.value)}
             />
           </div>
-          <div>
+          <div className="flex">
             <label className="uploadImage" htmlFor="qrcode">
               Upload QR Code
             </label>
             <input id="qrcode" type="file" onChange={uploadQrCode} hidden />
+            <div>
+              <a href="#" className="question">
+                <QuestionCircleFill />
+              </a>
+            </div>
           </div>
           <br />
           <button className="Generate" onClick={() => handleCaptureClick()}>

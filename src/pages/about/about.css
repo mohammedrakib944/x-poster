@@ -1,0 +1,17 @@
+.about-wrapper {
+  padding: 100px;
+}
+.cross {
+  background: none;
+  font-size: 36px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  float: right;
+  margin-top: -75px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cross :hover {
+  color: var(--secondary);
+}

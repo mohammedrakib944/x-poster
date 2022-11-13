@@ -21,10 +21,24 @@
 .uploadImage:hover {
   background: rgb(5, 53, 5);
 }
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.question {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  display: block;
+  color: #3b4443;
+  background: white;
+  border-radius: 50%;
+}
 .fields-wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 .input-cls {
   display: flex;
@@ -49,29 +63,25 @@
 }
 /* CARD START FROM HERE */
 .main {
-  max-width: 800px;
-  min-width: 700px;
-  min-height: 900px;
+  width: 842px;
+  height: 1191px;
   background: url("../../assets/cardBG.jpg") center no-repeat;
   border: 1px solid #ffffff;
   background-size: cover;
-  padding: 130px 100px 100px 100px;
+  padding: 100px;
   position: relative;
 }
-.poster-wrapper {
-  width: 100%;
-  min-height: 300px;
-  border-radius: 7px;
-}
 .posterImage {
-  width: 100%;
-  min-height: 300px;
+  width: 642px;
+  height: 642px;
+  object-fit: cover;
   background: #009688;
 }
 .title {
   width: 100%;
   text-align: center;
-  font-size: 46px;
+  overflow-wrap: anywhere;
+  font-size: 42px;
   margin-top: 10px;
   text-transform: uppercase;
   color: white;
@@ -80,13 +90,14 @@
 .doc {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
   margin-top: 10px;
   align-items: flex-end;
 }
 .title2 {
   font-size: 24px;
   color: var(--secondary);
+  overflow-wrap: anywhere;
   margin-top: 20px;
 }
 .id-rank {
@@ -103,18 +114,27 @@
 .content {
   color: white;
   font-family: Arial;
-  font-size: 16px;
+  font-size: 15px;
+  overflow-wrap: anywhere;
   line-height: 27px;
-  padding: 30px 0px;
+  padding: 20px 0px;
 }
 .footer {
   display: flex;
   gap: 30px;
 }
+
 .footer-doc > h3 {
-  font-size: 18px;
+  font-size: 16px;
+  overflow-wrap: anywhere;
   color: var(--secondary);
 }
+.footer-doc > p {
+  max-width: 200px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
 .qrCodeWrapper {
   width: 200px;
   min-height: 150px;
