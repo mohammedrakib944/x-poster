@@ -71,11 +71,23 @@
   padding: 100px;
   position: relative;
 }
+.main-poster-wrapper {
+  position: relative;
+}
+.poster-border {
+  width: 742px;
+  height: 742px;
+  top: -50px;
+  left: -50px;
+  position: absolute;
+  background: url(/src/assets/posterborder.png) center no-repeat;
+  background-size: contain;
+}
 .posterImage {
   width: 642px;
   height: 642px;
   object-fit: cover;
-  background: #009688;
+  background: #030303;
 }
 .title {
   width: 100%;
@@ -114,10 +126,10 @@
 .content {
   color: white;
   font-family: Arial;
-  font-size: 15px;
+  font-size: 12px;
   overflow-wrap: anywhere;
-  line-height: 27px;
-  padding: 20px 0px;
+  line-height: 18px;
+  padding: 10px 0px 15px 0px;
 }
 .footer {
   display: flex;

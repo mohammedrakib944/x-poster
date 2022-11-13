@@ -102,7 +102,7 @@ const Main = () => {
 
           <div className="input-cls">
             <p>
-              Description (<span>{description.length} / 250 )</span>
+              Description (<span>{description.length} / 500 )</span>
             </p>
             <textarea
               className="inputText"
@@ -110,7 +110,7 @@ const Main = () => {
               type="text"
               value={description}
               rows="3"
-              maxLength={250}
+              maxLength={500}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
           </div>
@@ -172,7 +172,10 @@ const Main = () => {
           <br />
           {/* DOWNLOADED CANVAS */}
           <div className="main" id="ourPoster">
-            <img className="posterImage" src={poster} />
+            <div className="main-poster-wrapper">
+              <div className="poster-border"></div>
+              <img className="posterImage" src={poster} />
+            </div>
             <h2 className="title">{title}</h2>
 
             <h3 className="title2">{owner}</h3>
