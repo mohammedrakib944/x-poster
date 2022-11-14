@@ -13,25 +13,39 @@ const About = () => {
         <h2>About US</h2>
         <br />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iure
-          omnis sequi saepe quos! Suscipit quae ullam facere, dolorem et labore
-          vel quas porro? Itaque magnam aliquam enim magni aut?
+          We are collectors of assets as well. And no, we don't call them JPEGS.
+          Only the one who does not have the knowledge calls them that. We
+          embarked on a journey to make you feel more than comfortable with your
+          NFTs. We want to grow the NFT community, but the power is in your
+          hands. You don't want your friends to fomo into crypto when news yell
+          AAAAAAAL TIME HIIIIIIIIGH.
         </p>
         <br />
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-          voluptatibus debitis inventore, quam minus, similique ullam molestiae
-          necessitatibus enim quae provident tempora mollitia cupiditate fuga
-          aliquam dolores, veritatis vitae? Odio, amet? Iure asperiores voluptas
-          itaque, dolorem mollitia recusandae reprehenderit impedit voluptatem.
-          Error dolorem nam non aliquid rerum qui perspiciatis provident
-          dignissimos officia sunt temporibus, iure tempora doloribus aperiam
-          minus? Dolor ipsum aperiam, incidunt facilis quod tempore voluptas
-          quae dignissimos animi. Fuga odit mollitia facilis officia iure ipsum
-          nobis iste impedit necessitatibus nostrum quaerat deserunt provident
-          numquam corporis esse, minus beatae cumque doloremque cum amet sequi
-          sint possimus dolore. Maxime, tempore?
+          Start a conversation about the JPEG with utility directly in your
+          living room. Our mission is to twin the digital art with traditional
+          and grow the NFT community.
         </p>
+        <br />
+        <p>
+          Let's be honest, the NFT you invested in, deserves more than being
+          trapped in your phone. You know, only a handful of NFTs deserve to be
+          kept long-term. The data shows people who print their NFTs are less
+          likely to paper hand them. Lock that asset on your living room wall.
+        </p>
+        <br />
+        <p>
+          If later you want to sell it, you can offer your printable poster with
+          it.
+        </p>
+        <br />
+        <p>
+          They are part of the future, and they should be part of now as well.
+          Now go generate an awesome poster for your favorite NFT. If you need
+          any help, custom Poster or collabs, DM us on Twitter.
+        </p>
+        <br />
+        <p>Have a wonderful day, Human!</p>
       </div>
     </div>
   );

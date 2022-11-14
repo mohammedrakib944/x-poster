@@ -18,6 +18,9 @@ const Main = () => {
   const [blockchain, setBlockchain] = useState("MultiversX");
   const [creator, setCreator] = useState("xxxx...xxxx");
 
+  const QuestionLink =
+    "https://docs.google.com/document/d/1efSPCJx4j8pTQlaCtiomMIrRAm1-A4sg3FpJmEBLj4Y/edit?usp=sharing";
+
   function uploadPoster(e) {
     setPoster(URL.createObjectURL(e.target.files[0]));
   }
@@ -47,7 +50,7 @@ const Main = () => {
               hidden
             />
             <div>
-              <a href="#" className="question">
+              <a href={QuestionLink} target="_blank" className="question">
                 <QuestionCircleFill />
               </a>
             </div>
@@ -156,7 +159,7 @@ const Main = () => {
             </label>
             <input id="qrcode" type="file" onChange={uploadQrCode} hidden />
             <div>
-              <a href="#" className="question">
+              <a href={QuestionLink} target="_blank" className="question">
                 <QuestionCircleFill />
               </a>
             </div>
@@ -190,7 +193,7 @@ const Main = () => {
                 <p className="content">{description}</p>
                 <div className="footer">
                   <div className="footer-doc">
-                    <h3>TOEKN</h3>
+                    <h3>TOKEN</h3>
                     <p>{token}</p>
                   </div>
                   <div className="footer-doc">
