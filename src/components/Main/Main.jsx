@@ -17,6 +17,7 @@ const Main = () => {
   const [token, setToken] = useState("xxxx-xxxxx-xx");
   const [blockchain, setBlockchain] = useState("MultiversX");
   const [creator, setCreator] = useState("xxxx...xxxx");
+  const [popup, setPopup] = useState(false);
 
   const QuestionLink =
     "https://docs.google.com/document/d/1efSPCJx4j8pTQlaCtiomMIrRAm1-A4sg3FpJmEBLj4Y/edit?usp=sharing";
@@ -33,11 +34,35 @@ const Main = () => {
     const canvas = await html2canvas(document.getElementById("ourPoster"));
     const dataURL = canvas.toDataURL("image/png");
     downloadjs(dataURL, "poster.png", "image/png");
+    setPopup(false);
   };
 
   return (
-    <>
-      <div className="main-wrapper">
+    <div>
+      {popup && (
+        <div className="popupWindow">
+          <div className="popupTexts">
+            <p>
+              This tool took a ton of work, and you can use it for free. Any
+              donation you might want to make is very much welcome. Here is my
+              herotag: @AndreiMX. Cheers!
+            </p>
+            <br />
+            <div className="flex">
+              <button className="dbutton" onClick={() => handleCaptureClick()}>
+                Download
+              </button>
+              <button
+                className="dbutton cancleb"
+                onClick={() => setPopup(false)}
+              >
+                Cancle
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      <div className="container main-wrapper">
         <div className="fields-wrapper">
           <div className="flex">
             <label className="uploadImage" htmlFor="posterimage">
@@ -165,7 +190,7 @@ const Main = () => {
             </div>
           </div>
           <br />
-          <button className="Generate" onClick={() => handleCaptureClick()}>
+          <button className="Generate" onClick={() => setPopup(true)}>
             DOWNLOAD
           </button>
         </div>
@@ -214,7 +239,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

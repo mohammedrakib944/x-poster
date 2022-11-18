@@ -8,7 +8,7 @@ const Nav = () => {
   const [togglePopUp, setTogglePopUp] = useState(false);
 
   return (
-    <div className="navbar">
+    <div className="container navbar">
       <Link to="/">
         <h2 className="logo">X-POSTERS</h2>
       </Link>

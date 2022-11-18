@@ -5,7 +5,7 @@ import { ArrowLeft } from "react-bootstrap-icons";
 const About = () => {
   const navigate = useNavigate();
   return (
-    <div className="about-wrapper">
+    <div className="container about-wrapper">
       <button className="cross" onClick={() => navigate(-1)}>
         <ArrowLeft />
       </button>

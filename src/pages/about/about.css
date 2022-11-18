@@ -1,5 +1,7 @@
 .about-wrapper {
   padding: 100px;
+  background: #000000b5;
+  border-radius: 20px;
 }
 .cross {
   background: none;

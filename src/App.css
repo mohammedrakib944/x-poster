@@ -3,10 +3,16 @@
 :root {
   --primary: #3af342;
   --secondary: #0ebfaf;
+  --font: "Chopsic";
 }
 /* 
 font-family: 'Goldman', cursive;
 */
+
+@font-face {
+  font-family: "Chopsic";
+  src: url(./fonts/Chopsic.ttf) format("truetype");
+}
 
 * {
   margin: 0;
@@ -19,7 +25,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background: url("./assets/bg.jpg") center no-repeat;
-  backdrop-filter: brightness(0.4);
+  /* backdrop-filter: brightness(0.4); */
   background-size: cover;
   color: white;
 }

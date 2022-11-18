@@ -3,7 +3,7 @@ import "./poster.css";
 
 const Poster = () => {
   return (
-    <div className="">
+    <div className="bal">
       <Main />
     </div>
   );
